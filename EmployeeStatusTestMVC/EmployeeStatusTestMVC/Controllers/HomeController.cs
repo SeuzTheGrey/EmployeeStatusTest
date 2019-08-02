@@ -35,7 +35,7 @@ namespace EmployeeStatusTestMVC.Controllers
 
             StaffInOutHistoryDAL.UpdateStatus(id, id, formCollection["Status"].ToString());
 
-            return Index();
+            return Redirect("Index");
         }
 
         public ActionResult Delete(int id)
@@ -43,7 +43,7 @@ namespace EmployeeStatusTestMVC.Controllers
 
             StaffDAL.DeleteEmployee(id);
 
-            return Index();
+            return Redirect("Index");
         }
 
         public ActionResult Update(int id)
@@ -59,7 +59,7 @@ namespace EmployeeStatusTestMVC.Controllers
 
             StaffDAL.UpdateEmployeeDetails(StaffStuff);
 
-            return Index();
+            return Redirect("Index");
         }
 
         public ActionResult Report()
