@@ -1,0 +1,16 @@
+E:\Projects\EmployeeStatusTest\EmployeeStatusTest\EmployeeStatusTest\bin\Debug\EmployeeStatusTest.exe.config
+E:\Projects\EmployeeStatusTest\EmployeeStatusTest\EmployeeStatusTest\bin\Debug\EmployeeStatusTest.exe
+E:\Projects\EmployeeStatusTest\EmployeeStatusTest\EmployeeStatusTest\bin\Debug\EmployeeStatusTest.pdb
+E:\Projects\EmployeeStatusTest\EmployeeStatusTest\EmployeeStatusTest\bin\Debug\DataAccess.dll
+E:\Projects\EmployeeStatusTest\EmployeeStatusTest\EmployeeStatusTest\bin\Debug\DataAccess.pdb
+E:\Projects\EmployeeStatusTest\EmployeeStatusTest\EmployeeStatusTest\bin\Debug\DataAccess.dll.config
+E:\Projects\EmployeeStatusTest\EmployeeStatusTest\EmployeeStatusTest\obj\Debug\EmployeeStatusTest.csprojAssemblyReference.cache
+E:\Projects\EmployeeStatusTest\EmployeeStatusTest\EmployeeStatusTest\obj\Debug\EmployeeStatusTest.Form1.resources
+E:\Projects\EmployeeStatusTest\EmployeeStatusTest\EmployeeStatusTest\obj\Debug\EmployeeStatusTest.Properties.Resources.resources
+E:\Projects\EmployeeStatusTest\EmployeeStatusTest\EmployeeStatusTest\obj\Debug\EmployeeStatusTest.csproj.GenerateResource.cache
+E:\Projects\EmployeeStatusTest\EmployeeStatusTest\EmployeeStatusTest\obj\Debug\EmployeeStatusTest.csproj.CoreCompileInputs.cache
+E:\Projects\EmployeeStatusTest\EmployeeStatusTest\EmployeeStatusTest\obj\Debug\EmployeeStatusTest.csproj.CopyComplete
+E:\Projects\EmployeeStatusTest\EmployeeStatusTest\EmployeeStatusTest\obj\Debug\EmployeeStatusTest.exe
+E:\Projects\EmployeeStatusTest\EmployeeStatusTest\EmployeeStatusTest\obj\Debug\EmployeeStatusTest.pdb
+E:\Projects\EmployeeStatusTest\EmployeeStatusTest\EmployeeStatusTest\obj\Debug\EmployeeStatusTest.Form2.resources
+E:\Projects\EmployeeStatusTest\EmployeeStatusTest\EmployeeStatusTest\obj\Debug\EmployeeStatusTest.Form3.resources

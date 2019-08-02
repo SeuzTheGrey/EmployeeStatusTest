@@ -1,0 +1,7 @@
+E:\Projects\EmployeeStatusTest\EmployeeStatusTest\DataAccess\bin\Debug\DataAccess.dll.config
+E:\Projects\EmployeeStatusTest\EmployeeStatusTest\DataAccess\bin\Debug\DataAccess.dll
+E:\Projects\EmployeeStatusTest\EmployeeStatusTest\DataAccess\bin\Debug\DataAccess.pdb
+E:\Projects\EmployeeStatusTest\EmployeeStatusTest\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
+E:\Projects\EmployeeStatusTest\EmployeeStatusTest\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+E:\Projects\EmployeeStatusTest\EmployeeStatusTest\DataAccess\obj\Debug\DataAccess.dll
+E:\Projects\EmployeeStatusTest\EmployeeStatusTest\DataAccess\obj\Debug\DataAccess.pdb
