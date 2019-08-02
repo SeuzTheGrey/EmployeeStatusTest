@@ -1,0 +1,49 @@
+﻿@model IEnumerable<EmployeeStatusTestMVC.Models.Staff>
+
+@{
+    ViewBag.Title = "Report";
+}
+
+<h2>Employee List</h2>
+
+@DateTime.Today
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TelephoneExtension)
+        </th>
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TelephoneExtension)
+            </td>
+
+
+        </tr>
+    }
+
+</table>

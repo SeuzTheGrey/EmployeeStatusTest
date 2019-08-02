@@ -18,6 +18,16 @@ namespace DataAccess
             return getEmployeeDetails;
         }
 
+        // data for export
+        public static DatabaseDataSet.GetEmployeeListDataTable getEmployeeList()
+        {
+            DatabaseDataSet.GetEmployeeListDataTable getEmployeeDetails = new DatabaseDataSet.GetEmployeeListDataTable();
+            DatabaseDataSetTableAdapters.GetEmployeeListTableAdapter getEmployeeDetailsTableAdapter = new DatabaseDataSetTableAdapters.GetEmployeeListTableAdapter();
+            getEmployeeDetailsTableAdapter.Fill(getEmployeeDetails);
+
+            return getEmployeeDetails;
+        }
+
         // Retreives all employees
         public static DatabaseDataSet.GetEmployeesDataTable GetEmployees()
         {

@@ -14,3 +14,4 @@ E:\Projects\EmployeeStatusTest\EmployeeStatusTest\EmployeeStatusTest\obj\Debug\E
 E:\Projects\EmployeeStatusTest\EmployeeStatusTest\EmployeeStatusTest\obj\Debug\EmployeeStatusTest.pdb
 E:\Projects\EmployeeStatusTest\EmployeeStatusTest\EmployeeStatusTest\obj\Debug\EmployeeStatusTest.Form2.resources
 E:\Projects\EmployeeStatusTest\EmployeeStatusTest\EmployeeStatusTest\obj\Debug\EmployeeStatusTest.Form3.resources
+E:\Projects\EmployeeStatusTest\EmployeeStatusTest\EmployeeStatusTest\obj\Debug\EmployeeStatusTest.Form5.resources

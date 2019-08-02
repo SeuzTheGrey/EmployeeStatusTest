@@ -7,7 +7,9 @@
 <h2>Index</h2>
 
 <p>
-    
+    @Html.ActionLink("Export Employee List","Exported")
+    @Html.ActionLink("Report Employee list","Report")
+   
     @Html.ActionLink("Add", "Add")
     @Html.ActionLink("Refresh", "Index")
 </p>
@@ -57,6 +59,7 @@
                 <input type="text" name="Status" />
                 @Html.ActionLink("Status Change", "Change", new { id = item.StaffID })
             }
+            | @Html.ActionLink("Report Employee History", "ReportHistories", new { id = item.StaffID })
 
         </td>
     </tr>

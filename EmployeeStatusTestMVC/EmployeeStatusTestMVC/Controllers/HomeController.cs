@@ -61,5 +61,26 @@ namespace EmployeeStatusTestMVC.Controllers
 
             return Index();
         }
+
+        public ActionResult Report()
+        {
+            List<Models.Staff> data = Models.Staff.GetStaffs();
+
+            return View(data);
+        }
+        public ActionResult ReportHistories(int id)
+        {
+            DatabaseDataSet.GetEmployeeHistoryDataTable getEmployeeHistories = StaffInOutHistoryDAL.GetEmployeeHistories(id);
+
+
+            return View(getEmployeeHistories);
+        }
+
+        public ActionResult Exported()
+        {
+            Export.ExportReports();
+
+            return Redirect("Index");
+        }
     }
 }

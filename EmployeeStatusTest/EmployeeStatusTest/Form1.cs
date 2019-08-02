@@ -67,5 +67,17 @@ namespace EmployeeStatusTest
         {
 
         }
+
+        private void btnReporting_Click(object sender, EventArgs e)
+        {
+            object[] values = GetEmployees[dataGridView1.SelectedRows[0].Index].ItemArray;
+            Form5 Employee = new Form5(values);
+            Employee.ShowDialog(this);
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            Export.ExportReports();
+        }
     }
 }

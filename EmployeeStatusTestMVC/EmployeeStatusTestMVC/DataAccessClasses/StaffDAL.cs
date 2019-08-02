@@ -17,6 +17,16 @@ namespace EmployeeStatusTestMVC
 
             return getEmployeeDetails;
         }
+
+        public static DatabaseDataSet.GetEmployeeListDataTable getEmployeeList()
+        {
+            DatabaseDataSet.GetEmployeeListDataTable getEmployeeDetails = new DatabaseDataSet.GetEmployeeListDataTable();
+            DatabaseDataSetTableAdapters.GetEmployeeListTableAdapter getEmployeeDetailsTableAdapter = new DatabaseDataSetTableAdapters.GetEmployeeListTableAdapter();
+            getEmployeeDetailsTableAdapter.Fill(getEmployeeDetails);
+
+            return getEmployeeDetails;
+        }
+
         public static DatabaseDataSet.GetEmployeesDataTable GetEmployees()
         {
             DatabaseDataSet.GetEmployeesDataTable getEmployees = new DatabaseDataSet.GetEmployeesDataTable();
