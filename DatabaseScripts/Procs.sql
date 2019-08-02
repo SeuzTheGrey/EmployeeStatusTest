@@ -17,3 +17,28 @@ create procedure DeleteEmployee @staffID int
 as
 delete Staff
 where StaffID = @staffID
+
+go 
+
+create procedure insertEmployee @staffid int, @lastname varchar,@firstname varchar ,@nickname varchar,@username varchar, @inoutstatusID int, @extension varchar,@flagDeleted bit, @managerid int
+as
+INSERT INTO Staff
+           ([StaffID]
+           ,[Lastname]
+           ,[Firstname]
+           ,[Nickname]
+           ,[Username]
+           ,[InOutStatusID]
+           ,[TelephoneExtension]
+           ,[FlagDeleted]
+           ,[ManagerID])
+     VALUES
+           (@staffid
+           ,@lastname
+           ,@firstname
+           ,@nickname
+           ,@username
+           ,@inoutstatusID
+           ,@extension
+           ,@flagDeleted
+           ,@managerid)

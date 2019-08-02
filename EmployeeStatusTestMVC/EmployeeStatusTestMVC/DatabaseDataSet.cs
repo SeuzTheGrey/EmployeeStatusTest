@@ -2,9 +2,11 @@
 {
 }
 
-namespace EmployeeStatusTestMVC {
-    
-    
-    public partial class DatabaseDataSet {
+namespace EmployeeStatusTestMVC
+{
+
+
+    public partial class DatabaseDataSet
+    {
     }
 }
