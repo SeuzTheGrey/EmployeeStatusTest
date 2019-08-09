@@ -28,7 +28,7 @@
             @Html.DisplayNameFor(model => model.Username)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.InOutStatusID)
+            Status
         </th>
         <th>
             @Html.DisplayNameFor(model => model.TelephoneExtension)
@@ -43,6 +43,7 @@
     </tr>
 
 @foreach (var item in Model) {
+    List<EmployeeStatusTestMVC.Models.InOutStatus> List = EmployeeStatusTestMVC.Models.InOutStatus.GetStatuses();
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.LastName)
@@ -57,7 +58,14 @@
             @Html.DisplayFor(modelItem => item.Username)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.InOutStatusID)
+            
+            @foreach (EmployeeStatusTestMVC.Models.InOutStatus thing in List)
+            {
+                if (thing.InOutStatusID == item.InOutStatusID)
+                {
+                    @Html.DisplayFor(modelThing => thing.Description)
+                }
+            }
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.TelephoneExtension)
@@ -78,7 +86,7 @@
             {
                 <input type="hidden" name="id" value="@item.StaffID" />
                 List<SelectListItem> selectLists = new List<SelectListItem>();
-                List<EmployeeStatusTestMVC.Models.InOutStatus> List = EmployeeStatusTestMVC.Models.InOutStatus.GetStatuses();
+               
 
                 foreach (EmployeeStatusTestMVC.Models.InOutStatus thing in List)
                 {

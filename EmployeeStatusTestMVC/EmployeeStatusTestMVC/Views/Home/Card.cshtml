@@ -1,4 +1,4 @@
-﻿@model EmployeeStatusTestMVC.Models.Staff
+﻿@model EmployeeStatusTestMVC.Models.StaffEmployeeHistory
 
 @{
     ViewBag.Title = "Card";
@@ -11,82 +11,123 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.LastName)
+            @Html.DisplayNameFor(model => model.staff.LastName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.LastName)
+            @Html.DisplayFor(model => model.staff.LastName)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.FirstName)
+            @Html.DisplayNameFor(model => model.staff.FirstName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.FirstName)
+            @Html.DisplayFor(model => model.staff.FirstName)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Nickname)
+            @Html.DisplayNameFor(model => model.staff.Nickname)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Nickname)
+            @Html.DisplayFor(model => model.staff.Nickname)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Username)
+            @Html.DisplayNameFor(model => model.staff.Username)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Username)
+            @Html.DisplayFor(model => model.staff.Username)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.InOutStatusID)
+            @Html.DisplayNameFor(model => model.staff.InOutStatusID)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.InOutStatusID)
+            @Html.DisplayFor(model => model.staff.InOutStatusID)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Status)
+            @Html.DisplayNameFor(model => model.staff.Status)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Status)
+            @Html.DisplayFor(model => model.staff.Status)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.TelephoneExtension)
+            @Html.DisplayNameFor(model => model.staff.TelephoneExtension)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.TelephoneExtension)
+            @Html.DisplayFor(model => model.staff.TelephoneExtension)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.FlagDeleted)
+            @Html.DisplayNameFor(model => model.staff.FlagDeleted)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.FlagDeleted)
+            @Html.DisplayFor(model => model.staff.FlagDeleted)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.ManagerID)
+            @Html.DisplayNameFor(model => model.staff.ManagerID)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.ManagerID)
+            @Html.DisplayFor(model => model.staff.ManagerID)
         </dd>
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.StaffID }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.staff.StaffID }) |
     @Html.ActionLink("Back to List", "Home")
 </p>
 
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EmployeeHistory[0].Nickname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmployeeHistory[0].StatusBeforeChange)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmployeeHistory[0].StatusAfterChange)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmployeeHistory[0].DateChanged)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmployeeHistory[0].StatusChangedBy)
+        </th>
+        <th></th>
+    </tr>
 
+    @foreach (EmployeeStatusTestMVC.Models.EmployeeHistory item in Model.EmployeeHistory)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nickname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StatusBeforeChange)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StatusAfterChange)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateChanged)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StatusChangedBy)
+            </td>
+        </tr>
+    }
+
+</table>

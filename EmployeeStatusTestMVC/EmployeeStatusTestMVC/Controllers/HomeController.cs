@@ -39,10 +39,10 @@ namespace EmployeeStatusTestMVC.Controllers
 
         public ActionResult Card(int id)
         {
+            Models.StaffEmployeeHistory staffEmployeeHistory = new Models.StaffEmployeeHistory(Models.Staff.GetDetail(id), Models.EmployeeHistory.GetEmployeeHistories(id));
+            
 
-            Models.Staff staff = Models.Staff.GetDetail(id);
-
-            return View(staff);
+            return View(staffEmployeeHistory);
 
         }
 
@@ -113,10 +113,9 @@ namespace EmployeeStatusTestMVC.Controllers
         }
         public ActionResult ReportHistories(int id)
         {
-            DatabaseDataSet.GetEmployeeHistoryDataTable getEmployeeHistories = StaffInOutHistoryDAL.GetEmployeeHistories(id);
+            List<Models.EmployeeHistory> employeeHistory =  Models.EmployeeHistory.GetEmployeeHistories(id);
 
-
-            return View(getEmployeeHistories);
+            return View(employeeHistory);
         }
 
         public ActionResult Exported()
