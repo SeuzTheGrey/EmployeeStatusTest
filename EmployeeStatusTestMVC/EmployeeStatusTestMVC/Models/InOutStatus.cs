@@ -20,5 +20,21 @@ namespace EmployeeStatusTestMVC.Models
             this.InOutStatusID = InOutStatusID;
             this.Description = Description;
         }
+
+
+        public static List<InOutStatus> GetStatuses()
+        {
+            List<InOutStatus> statuses = new List<InOutStatus>();
+
+            DatabaseDataSet.InOutStatusDataTable inOutStatusRows = InOutStatusDAL.GetEmployeeList();
+
+            foreach (DatabaseDataSet.InOutStatusRow item in inOutStatusRows.Rows)
+            {
+                statuses.Add(new InOutStatus(item.InOutStatusID, item.Description));
+            }
+
+
+            return statuses;
+        }
     }
 }

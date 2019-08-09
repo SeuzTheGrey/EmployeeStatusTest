@@ -193,6 +193,7 @@
     <Content Include="Views\Home\Report.cshtml" />
     <Content Include="Views\Home\Update.cshtml" />
     <Content Include="Views\Home\Delete.cshtml" />
+    <Content Include="Views\Home\Change.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

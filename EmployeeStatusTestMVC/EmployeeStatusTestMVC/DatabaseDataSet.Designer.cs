@@ -3711,17 +3711,10 @@ namespace EmployeeStatusTestMVC {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int? ManagerID {
+            public int ManagerID {
                 get {
                     try {
-                        if (this[this.tableStaff.ManagerIDColumn] == DBNull.Value)
-                        {
-                            return null;
-                        }
-                        else
-                        {
-                            return ((int?)(this[this.tableStaff.ManagerIDColumn]));
-                        }
+                        return ((int)(this[this.tableStaff.ManagerIDColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'ManagerID\' in table \'Staff\' is DBNull.", e);
@@ -4027,17 +4020,10 @@ namespace EmployeeStatusTestMVC {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int? ManagerID {
+            public int ManagerID {
                 get {
                     try {
-                        if (this[this.tableGetEmployeeStatus.ManagerIDColumn] == DBNull.Value)
-                        {
-                            return null;
-                        }
-                        else
-                        {
-                            return ((int?)(this[this.tableGetEmployeeStatus.ManagerIDColumn]));
-                        }
+                        return ((int)(this[this.tableGetEmployeeStatus.ManagerIDColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'ManagerID\' in table \'GetEmployeeStatus\' is DBNull.", e);
@@ -4417,10 +4403,17 @@ namespace EmployeeStatusTestMVC {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int ManagerID {
+            public int? ManagerID {
                 get {
                     try {
-                        return ((int)(this[this.tablegetEmployeeDetails.ManagerIDColumn]));
+                        if (this[this.tablegetEmployeeDetails.ManagerIDColumn] == DBNull.Value)
+                        {
+                            return null;
+                        }
+                        else
+                        {
+                            return ((int)(this[this.tablegetEmployeeDetails.ManagerIDColumn]));
+                        }
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'ManagerID\' in table \'getEmployeeDetails\' is DBNull.", e);

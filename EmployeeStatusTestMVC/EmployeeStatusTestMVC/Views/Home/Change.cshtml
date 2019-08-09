@@ -1,0 +1,20 @@
+﻿@model IEnumerable<EmployeeStatusTestMVC.Models.InOutStatus>
+
+@{
+    ViewBag.Title = "Change";
+}
+
+@using (Html.BeginForm("Change", "Home","Post"))
+{
+    <p>hi</p>
+    List<SelectListItem> selectLists = new List<SelectListItem>();
+
+    foreach (EmployeeStatusTestMVC.Models.InOutStatus item in Model)
+    {
+        selectLists.Add(new SelectListItem { Text = item.Description, Value = item.InOutStatusID.ToString() });
+    }
+
+    @Html.DropDownList("Status", selectLists)
+
+    <button>Submit</button>
+}

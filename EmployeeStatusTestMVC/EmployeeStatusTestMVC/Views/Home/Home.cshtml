@@ -72,16 +72,24 @@
             @Html.ActionLink("Update", "Update", new { id = item.StaffID }) |
             @Html.ActionLink("Delete", "Delete", new { id = item.StaffID }) |
             @Html.ActionLink("Employee", "Card", new { id = item.StaffID }) |
-            @*
-                still trying to figure it out
-                
-                @using (Html.BeginForm("Change", "Home"))
+            @*@Html.ActionLink("Change Status", "Change", new { id = item.StaffID })*@
+
+            @using (Html.BeginForm("Change", "Home"))
             {
-                <input type="text" name="Status" />
                 <input type="hidden" name="id" value="@item.StaffID" />
-                <button type="submit" > submit  </button>
-                
-            }*@
+                List<SelectListItem> selectLists = new List<SelectListItem>();
+                List<EmployeeStatusTestMVC.Models.InOutStatus> List = EmployeeStatusTestMVC.Models.InOutStatus.GetStatuses();
+
+                foreach (EmployeeStatusTestMVC.Models.InOutStatus thing in List)
+                {
+                    selectLists.Add(new SelectListItem { Text = thing.Description, Value = thing.InOutStatusID.ToString() });
+                }
+
+                @Html.DropDownList("Status", selectLists)
+
+                <button>Submit</button>
+
+            }
             | @Html.ActionLink("Report Employee History", "ReportHistories", new { id = item.StaffID })
         </td>
     </tr>

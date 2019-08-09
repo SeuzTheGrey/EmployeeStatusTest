@@ -15,11 +15,13 @@ namespace EmployeeStatusTestMVC
             DatabaseDataSet.InOutStatusDataTable inOutStatusDataTable = new DatabaseDataSet.InOutStatusDataTable();
             using (Database.GetConnection())
             {
-                EmployeeStatusTestMVC.DatabaseDataSetTableAdapters.InOutStatusTableAdapter getEmployeeListTableAdapter = new EmployeeStatusTestMVC.DatabaseDataSetTableAdapters.InOutStatusTableAdapter();
+                DatabaseDataSetTableAdapters.InOutStatusTableAdapter getEmployeeListTableAdapter = new DatabaseDataSetTableAdapters.InOutStatusTableAdapter();
                 getEmployeeListTableAdapter.Fill(inOutStatusDataTable);
             }
 
             return inOutStatusDataTable;
         }
+
+        
     }
 }
