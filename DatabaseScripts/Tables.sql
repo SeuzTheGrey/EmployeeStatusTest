@@ -5,7 +5,7 @@ Description nvarchar(255) not null
 
 create table Staff(
 
-StaffID int not null primary key,
+StaffID int not null primary key identity,
 Lastname nvarchar(80) not null,
 Firstname nvarchar(80) not null,
 Nickname nvarchar(80) not null,

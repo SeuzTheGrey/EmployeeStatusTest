@@ -5,7 +5,7 @@ where StaffID = @staffID
 
 go
 
-create procedure UpdateEmployeeDetails @staffID int ,@Lastname varchar ,@firstname varchar ,@nickname varchar, @telephoneExtension varchar, @flagDeleted bit
+create procedure UpdateEmployeeDetails @staffID int ,@Lastname varchar(80) ,@firstname varchar(80) ,@nickname varchar(80), @telephoneExtension varchar(80), @flagDeleted bit
 as
 update Staff
 set Lastname = @Lastname, Firstname = @firstname, Nickname = @nickname, TelephoneExtension = @telephoneExtension, FlagDeleted = @flagDeleted
@@ -20,7 +20,7 @@ where StaffID = @staffID
 
 go 
 
-create procedure insertEmployee @staffid int, @lastname varchar,@firstname varchar ,@nickname varchar,@username varchar, @inoutstatusID int, @extension varchar,@flagDeleted bit, @managerid int
+create procedure insertEmployee @staffid int, @lastname varchar(80),@firstname varchar(80) ,@nickname varchar(80),@username varchar(80), @inoutstatusID int, @extension varchar(80),@flagDeleted bit, @managerid int
 as
 INSERT INTO Staff
            ([StaffID]

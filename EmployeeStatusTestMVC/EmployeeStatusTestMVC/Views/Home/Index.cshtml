@@ -1,68 +1,13 @@
-﻿@model IEnumerable<EmployeeStatusTestMVC.Models.Staff>
+﻿@model EmployeeStatusTestMVC.Models.Staff
 
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+@using (Html.BeginForm("Login", "Home"))
+{ 
 
-<p>
-    @Html.ActionLink("Export Employee List","Exported")
-    @Html.ActionLink("Report Employee list","Report")
-   
-    @Html.ActionLink("Add", "Add")
-    @Html.ActionLink("Refresh", "Index")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.StaffID)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LastName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FirstName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Status)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TelephoneExtension)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.StaffID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LastName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FirstName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Status)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TelephoneExtension)
-        </td>
-        <td>
-            @Html.ActionLink("Update", "Update", new { id = item.StaffID }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.StaffID }) |
-            @Html.ActionLink("Employee", "Card", new { id = item.StaffID }) |
-            @using (Html.BeginForm("Change", "Home", "Post"))
-            {
-                <input type="text" name="Status" />
-                @Html.ActionLink("Status Change", "Change", new { id = item.StaffID })
-            }
-            | @Html.ActionLink("Report Employee History", "ReportHistories", new { id = item.StaffID })
-
-        </td>
-    </tr>
+<label>Username:</label><input name="Username" type="text" placeholder="Username" />
+<button type="submit">Submit</button>
 }
 
-</table>

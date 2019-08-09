@@ -11,8 +11,29 @@ namespace EmployeeStatusTestMVC.Controllers
         public ActionResult Index()
         {
 
-            List<Models.Staff> data = Models.Staff.GetStaffs();
 
+
+            return View();
+        }
+
+        public ActionResult Login(FormCollection form)
+        {
+            List<Models.Staff> data = Models.Staff.GetStaffs();
+            foreach (Models.Staff item in data)
+            {
+                if (form["Username"].ToString() == item.Username)
+                {
+                    Session["UserID"] = item.StaffID;
+                    return Redirect("Home");
+                }
+
+            }
+            return Redirect("Index");
+        }
+
+        public ActionResult Home()
+        {
+            List<Models.Staff> data = Models.Staff.GetStaffs();
             return View(data);
         }
 
@@ -22,6 +43,7 @@ namespace EmployeeStatusTestMVC.Controllers
             Models.Staff staff = Models.Staff.GetDetail(id);
 
             return View(staff);
+
         }
 
         public ActionResult Add()
@@ -29,13 +51,22 @@ namespace EmployeeStatusTestMVC.Controllers
             return View();
         }
 
-        public ActionResult Change(int id, FormCollection formCollection)
+        [HttpPost]
+        public ActionResult Add(Models.Staff staff)
+        {
+            StaffDAL.InsertEmployee(staff);
+
+            return Redirect("Home");
+        }
+
+
+        public ActionResult Change(FormCollection formCollection)
         {
 
 
-            StaffInOutHistoryDAL.UpdateStatus(id, id, formCollection["Status"].ToString());
+            StaffInOutHistoryDAL.UpdateStatus(int.Parse(Request.Form["id"].ToString()), int.Parse(Session["UserID"].ToString()), Request.Form["Status"].ToString());
 
-            return Redirect("Index");
+            return Redirect("Home");
         }
 
         public ActionResult Delete(int id)
@@ -43,7 +74,7 @@ namespace EmployeeStatusTestMVC.Controllers
 
             StaffDAL.DeleteEmployee(id);
 
-            return Redirect("Index");
+            return Redirect("\\Home\\Home");
         }
 
         public ActionResult Update(int id)
@@ -52,14 +83,26 @@ namespace EmployeeStatusTestMVC.Controllers
             Models.Staff staff = Models.Staff.GetDetail(id);
 
             return View(staff);
+
         }
 
-        public ActionResult Amend(Models.Staff StaffStuff)
+        public ActionResult Amend(Models.Staff smodel)
         {
 
-            StaffDAL.UpdateEmployeeDetails(StaffStuff);
 
-            return Redirect("Index");
+            if (ModelState.IsValid)
+            {
+
+                StaffDAL.UpdateEmployeeDetails(smodel);
+
+                return Redirect("Home");
+            }
+            else
+            {
+                return Redirect("Home");
+            }
+
+
         }
 
         public ActionResult Report()

@@ -1,0 +1,90 @@
+﻿@model IEnumerable<EmployeeStatusTestMVC.Models.Staff>
+
+@{
+    ViewBag.Title = "Home";
+}
+
+<h2>Home</h2>
+
+<p>
+    @Html.ActionLink("Export Employee List", "Exported")
+    @Html.ActionLink("Report Employee list", "Report")
+
+    @Html.ActionLink("Add", "Add")
+    @Html.ActionLink("Refresh", "Index")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nickname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InOutStatusID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TelephoneExtension)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FlagDeleted)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ManagerID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nickname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InOutStatusID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TelephoneExtension)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FlagDeleted)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ManagerID)
+        </td>
+        <td>
+            @Html.ActionLink("Update", "Update", new { id = item.StaffID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.StaffID }) |
+            @Html.ActionLink("Employee", "Card", new { id = item.StaffID }) |
+            @*
+                still trying to figure it out
+                
+                @using (Html.BeginForm("Change", "Home"))
+            {
+                <input type="text" name="Status" />
+                <input type="hidden" name="id" value="@item.StaffID" />
+                <button type="submit" > submit  </button>
+                
+            }*@
+            | @Html.ActionLink("Report Employee History", "ReportHistories", new { id = item.StaffID })
+        </td>
+    </tr>
+}
+
+</table>

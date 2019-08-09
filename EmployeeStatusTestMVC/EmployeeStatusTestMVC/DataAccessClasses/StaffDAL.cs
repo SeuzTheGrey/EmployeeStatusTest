@@ -72,7 +72,7 @@ namespace EmployeeStatusTestMVC
             using (Database.GetConnection())
             {
                 DatabaseDataSetTableAdapters.QueriesTableAdapter queriesTableAdapter = new DatabaseDataSetTableAdapters.QueriesTableAdapter();
-                if (queriesTableAdapter.UpdateEmployeeDetails(staff.StaffID,staff.LastName,staff.FirstName,staff.Nickname,staff.TelephoneExtension,staff.FlagDeleted) > 0)
+                if (queriesTableAdapter.UpdateEmployeeDetails(staff.StaffID,staff.LastName,staff.FirstName,staff.Nickname,staff.Username,staff.TelephoneExtension,staff.FlagDeleted) > 0)
                 {
                     return true;
                 }
@@ -87,6 +87,20 @@ namespace EmployeeStatusTestMVC
             {
                 DatabaseDataSetTableAdapters.QueriesTableAdapter queriesTableAdapter = new DatabaseDataSetTableAdapters.QueriesTableAdapter();
                 if (queriesTableAdapter.DeleteEmployee(StaffId) > 0)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        public static bool InsertEmployee(Models.Staff staff)
+        {
+            using (Database.GetConnection())
+            {
+                DatabaseDataSetTableAdapters.QueriesTableAdapter queriesTableAdapter = new DatabaseDataSetTableAdapters.QueriesTableAdapter();
+                if (queriesTableAdapter.insertEmployee(staff.StaffID, staff.LastName, staff.FirstName, staff.Nickname, staff.Username,staff.InOutStatusID, staff.TelephoneExtension, staff.FlagDeleted,staff.ManagerID) > 0)
                 {
                     return true;
                 }

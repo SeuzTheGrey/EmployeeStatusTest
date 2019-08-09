@@ -6,19 +6,20 @@
 
 <h2>Add</h2>
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("Add", "Home"))
 {
-    <label>StaffID</label><input type="text" name="StaffID" />
-    <label>LastName</label><input type="text" name="LastName" />
-    <label>FirstName</label><input type="text" name="FirstName" />
-    <label>Nickname</label><input type="text" name="Nickname" />
-    <label>Username</label><input type="text" name="Username" />
-    <label>InOutStatusID</label><input type="text" name="InOutStatusID" />
-    <label>TelephoneExtension</label><input type="text" name="TelephoneExtension" />
-    <label>FlagDeleted</label><input type="text" name="FlagDeleted" />
-    <label>ManagerID</label><input type="text" name="ManagerID" />
+    <label>StaffID</label><input type="text" name="StaffID" /><br />
+    <label>LastName</label><input type="text" name="LastName" /><br />
+    <label>FirstName</label><input type="text" name="FirstName" /><br />
+    <label>Nickname</label><input type="text" name="Nickname" /><br />
+    <label>Username</label><input type="text" name="Username" /><br />
+    <label>InOutStatusID</label><input type="text" name="InOutStatusID" /><br />
+    <label>TelephoneExtension</label><input type="text" name="TelephoneExtension" /><br />
+    <label>FlagDeleted</label><input type="text" name="FlagDeleted" /><br />
+    <label>ManagerID</label><input type="text" name="ManagerID" /><br />
+    <button type="submit">Submit</button>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "Home")
 </div>
