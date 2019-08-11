@@ -64,7 +64,7 @@ namespace EmployeeStatusTestMVC.Controllers
         {
 
 
-            StaffInOutHistoryDAL.UpdateStatus(int.Parse(Request.Form["id"].ToString()), int.Parse(Session["UserID"].ToString()), Request.Form["Status"].ToString());
+            StaffInOutHistoryDAL.UpdateStatus(int.Parse(Request.Form["id"].ToString()), int.Parse(Session["UserID"].ToString()), int.Parse(Request.Form["Status"].ToString()));
 
             return Redirect("Home");
         }

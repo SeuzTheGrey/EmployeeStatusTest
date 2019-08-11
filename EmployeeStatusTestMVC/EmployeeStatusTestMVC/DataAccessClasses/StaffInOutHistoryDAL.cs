@@ -23,7 +23,7 @@ namespace EmployeeStatusTestMVC
             return getEmployeeHistories;
         }
 
-        public static bool UpdateStatus(int staffid,int changedby, string status)
+        public static bool UpdateStatus(int staffid,int changedby, int status)
         {
             using (Database.GetConnection())
             {
