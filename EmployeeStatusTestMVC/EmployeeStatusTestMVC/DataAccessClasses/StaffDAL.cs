@@ -95,12 +95,12 @@ namespace EmployeeStatusTestMVC
             return false;
         }
 
-        public static bool InsertEmployee(Models.Staff staff)
+        public static bool InsertEmployee(Models.Staff staff,int changedBy)
         {
             using (Database.GetConnection())
             {
                 DatabaseDataSetTableAdapters.QueriesTableAdapter queriesTableAdapter = new DatabaseDataSetTableAdapters.QueriesTableAdapter();
-                if (queriesTableAdapter.insertEmployee(staff.StaffID, staff.LastName, staff.FirstName, staff.Nickname, staff.Username,staff.InOutStatusID, staff.TelephoneExtension, staff.FlagDeleted,staff.ManagerID) > 0)
+                if (queriesTableAdapter.insertEmployee( staff.LastName, staff.FirstName, staff.Nickname, staff.Username,staff.InOutStatusID, staff.TelephoneExtension, staff.FlagDeleted,staff.ManagerID, changedBy) > 0)
                 {
                     return true;
                 }

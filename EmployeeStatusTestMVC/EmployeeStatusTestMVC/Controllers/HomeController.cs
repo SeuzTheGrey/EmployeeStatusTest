@@ -54,7 +54,7 @@ namespace EmployeeStatusTestMVC.Controllers
         [HttpPost]
         public ActionResult Add(Models.Staff staff)
         {
-            StaffDAL.InsertEmployee(staff);
+            StaffDAL.InsertEmployee(staff, int.Parse(Session["UserID"].ToString()));
 
             return Redirect("Home");
         }

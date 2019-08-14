@@ -17,7 +17,7 @@ ManagerID int null foreign key references Staff(StaffID)
 )
 
 create table StaffInOutHistory(
-StaffInOutHistoryID int  not null primary key,
+StaffInOutHistoryID int  not null primary key identity,
 StaffID int not null foreign key references Staff(StaffID),
 InOutStatusIDOld int not null foreign key references InOutStatus(InOutStatusID),
 InOutStatusIDNew int not null foreign key references InOutStatus(InOutStatusID),
