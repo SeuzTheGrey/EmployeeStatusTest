@@ -58,12 +58,12 @@ namespace DataAccess
             return getEmployeeStatuses;
         }
 
-        public static bool UpdateEmployeeDetails(int StaffID, string LastName, string FirstName, string Nickname, string TelephoneExtension, bool FlagDeleted)
+        public static bool UpdateEmployeeDetails(int StaffID, string LastName, string FirstName, string Nickname, string username, string TelephoneExtension, bool FlagDeleted)
         {
             using (Database.GetConnection())
             {
                 DatabaseDataSetTableAdapters.QueriesTableAdapter queriesTableAdapter = new DatabaseDataSetTableAdapters.QueriesTableAdapter();
-                if (queriesTableAdapter.UpdateEmployeeDetails(StaffID, LastName, FirstName, Nickname, TelephoneExtension, FlagDeleted) > 0)
+                if (queriesTableAdapter.UpdateEmployeeDetails(StaffID, LastName, FirstName, Nickname, username, TelephoneExtension, FlagDeleted) > 0)
                 {
                     return true;
                 }
@@ -86,5 +86,7 @@ namespace DataAccess
 
             return false;
         }
+
+
     }
 }

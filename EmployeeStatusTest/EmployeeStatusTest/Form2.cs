@@ -16,7 +16,7 @@ namespace EmployeeStatusTest
         DatabaseDataSet.getEmployeeDetailsDataTable GetEmployees;
         BindingSource bindingSource;
         object[] employee;
-        public Form2(object[] values)
+        public Form2(object[] values,int UserId)
         {
             InitializeComponent();
             GetEmployees = StaffDAL.getEmployeeDetails(int.Parse(values[0].ToString()));
@@ -41,7 +41,7 @@ namespace EmployeeStatusTest
 
         private void btnUpate_Click(object sender, EventArgs e)
         {
-            if (StaffDAL.UpdateEmployeeDetails(int.Parse(employee[0].ToString()), txtLastName.Text, txtFirstName.Text, txtNickname.Text, txtTelephoneExtension.Text, bool.Parse(txtFlagDeleted.Text)))
+            if (StaffDAL.UpdateEmployeeDetails(int.Parse(employee[0].ToString()), txtLastName.Text, txtFirstName.Text, txtNickname.Text,txtUsername.Text, txtTelephoneExtension.Text, bool.Parse(txtFlagDeleted.Text)))
             {
                 this.Close();
             }

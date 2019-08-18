@@ -15,15 +15,15 @@ namespace EmployeeStatusTest
     {
         DatabaseDataSet.getEmployeeDetailsDataTable GetEmployees;
         object[] employee;
-        public Form3(object[] values)
+        public Form3(object[] values, int UserId)
         {
             InitializeComponent();
 
             GetEmployees = StaffDAL.getEmployeeDetails(int.Parse(values[0].ToString()));
             employee = GetEmployees.Rows[0].ItemArray;
 
-            txtFirstName.Text = employee[1].ToString();
-            txtLastName.Text = employee[2].ToString();
+            txtFirstName.Text = employee[2].ToString();
+            txtLastName.Text = employee[1].ToString();
             txtNickname.Text = employee[3].ToString();
             txtTelephoneExtension.Text = employee[6].ToString();
             txtUsername.Text = employee[4].ToString();
@@ -37,7 +37,7 @@ namespace EmployeeStatusTest
 
         private void btnUpate_Click(object sender, EventArgs e)
         {
-            if (StaffDAL.UpdateEmployeeDetails(int.Parse(employee[0].ToString()), txtLastName.Text, txtFirstName.Text, txtNickname.Text, txtTelephoneExtension.Text, bool.Parse(txtFlagDeleted.Text)))
+            if (StaffDAL.UpdateEmployeeDetails(int.Parse(employee[0].ToString()), txtLastName.Text, txtFirstName.Text, txtNickname.Text, txtUsername.Text, txtTelephoneExtension.Text, bool.Parse(txtFlagDeleted.Text)))
             {
                 this.Close();
             }

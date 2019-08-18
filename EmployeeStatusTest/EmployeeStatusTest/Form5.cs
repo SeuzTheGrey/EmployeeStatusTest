@@ -15,7 +15,7 @@ namespace EmployeeStatusTest
     {
         DatabaseDataSet.GetEmployeeHistoryDataTable GetEmployees;
         BindingSource bindingSource;
-        public Form5(object[] values)
+        public Form5(object[] values, int UserId)
         {
             InitializeComponent();
             GetEmployees = StaffInOutHistoryDAL.GetEmployeeHistories(int.Parse(values[0].ToString()));

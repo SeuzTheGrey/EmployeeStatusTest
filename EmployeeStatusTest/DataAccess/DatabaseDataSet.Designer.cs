@@ -10,6 +10,8 @@
 
 #pragma warning disable 1591
 
+using System;
+
 namespace DataAccess {
     
     
@@ -40,17 +42,17 @@ namespace DataAccess {
         
         private GetEmployeesDataTable tableGetEmployees;
         
-        private global::System.Data.DataRelation relationFK__StaffInOu__Chang__403A8C7D;
+        private global::System.Data.DataRelation relationFK__StaffInOu__Chang__22751F6C;
         
-        private global::System.Data.DataRelation relationFK__StaffInOu__InOut__3E52440B;
+        private global::System.Data.DataRelation relationFK__StaffInOu__InOut__208CD6FA;
         
-        private global::System.Data.DataRelation relationFK__StaffInOu__InOut__3F466844;
+        private global::System.Data.DataRelation relationFK__StaffInOu__InOut__2180FB33;
         
-        private global::System.Data.DataRelation relationFK__StaffInOu__Staff__3D5E1FD2;
+        private global::System.Data.DataRelation relationFK__StaffInOu__Staff__1F98B2C1;
         
-        private global::System.Data.DataRelation relationFK__Staff__InOutStat__398D8EEE;
+        private global::System.Data.DataRelation relationFK__Staff__InOutStat__1BC821DD;
         
-        private global::System.Data.DataRelation relationFK__Staff__ManagerID__3A81B327;
+        private global::System.Data.DataRelation relationFK__Staff__ManagerID__1CBC4616;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -374,12 +376,12 @@ namespace DataAccess {
                     this.tableGetEmployees.InitVars();
                 }
             }
-            this.relationFK__StaffInOu__Chang__403A8C7D = this.Relations["FK__StaffInOu__Chang__403A8C7D"];
-            this.relationFK__StaffInOu__InOut__3E52440B = this.Relations["FK__StaffInOu__InOut__3E52440B"];
-            this.relationFK__StaffInOu__InOut__3F466844 = this.Relations["FK__StaffInOu__InOut__3F466844"];
-            this.relationFK__StaffInOu__Staff__3D5E1FD2 = this.Relations["FK__StaffInOu__Staff__3D5E1FD2"];
-            this.relationFK__Staff__InOutStat__398D8EEE = this.Relations["FK__Staff__InOutStat__398D8EEE"];
-            this.relationFK__Staff__ManagerID__3A81B327 = this.Relations["FK__Staff__ManagerID__3A81B327"];
+            this.relationFK__StaffInOu__Chang__22751F6C = this.Relations["FK__StaffInOu__Chang__22751F6C"];
+            this.relationFK__StaffInOu__InOut__208CD6FA = this.Relations["FK__StaffInOu__InOut__208CD6FA"];
+            this.relationFK__StaffInOu__InOut__2180FB33 = this.Relations["FK__StaffInOu__InOut__2180FB33"];
+            this.relationFK__StaffInOu__Staff__1F98B2C1 = this.Relations["FK__StaffInOu__Staff__1F98B2C1"];
+            this.relationFK__Staff__InOutStat__1BC821DD = this.Relations["FK__Staff__InOutStat__1BC821DD"];
+            this.relationFK__Staff__ManagerID__1CBC4616 = this.Relations["FK__Staff__ManagerID__1CBC4616"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -406,30 +408,30 @@ namespace DataAccess {
             base.Tables.Add(this.tableGetEmployeeList);
             this.tableGetEmployees = new GetEmployeesDataTable();
             base.Tables.Add(this.tableGetEmployees);
-            this.relationFK__StaffInOu__Chang__403A8C7D = new global::System.Data.DataRelation("FK__StaffInOu__Chang__403A8C7D", new global::System.Data.DataColumn[] {
+            this.relationFK__StaffInOu__Chang__22751F6C = new global::System.Data.DataRelation("FK__StaffInOu__Chang__22751F6C", new global::System.Data.DataColumn[] {
                         this.tableStaff.StaffIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableStaffInOutHistory.ChangedByStaffIDColumn}, false);
-            this.Relations.Add(this.relationFK__StaffInOu__Chang__403A8C7D);
-            this.relationFK__StaffInOu__InOut__3E52440B = new global::System.Data.DataRelation("FK__StaffInOu__InOut__3E52440B", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__StaffInOu__Chang__22751F6C);
+            this.relationFK__StaffInOu__InOut__208CD6FA = new global::System.Data.DataRelation("FK__StaffInOu__InOut__208CD6FA", new global::System.Data.DataColumn[] {
                         this.tableInOutStatus.InOutStatusIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableStaffInOutHistory.InOutStatusIDOldColumn}, false);
-            this.Relations.Add(this.relationFK__StaffInOu__InOut__3E52440B);
-            this.relationFK__StaffInOu__InOut__3F466844 = new global::System.Data.DataRelation("FK__StaffInOu__InOut__3F466844", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__StaffInOu__InOut__208CD6FA);
+            this.relationFK__StaffInOu__InOut__2180FB33 = new global::System.Data.DataRelation("FK__StaffInOu__InOut__2180FB33", new global::System.Data.DataColumn[] {
                         this.tableInOutStatus.InOutStatusIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableStaffInOutHistory.InOutStatusIDNewColumn}, false);
-            this.Relations.Add(this.relationFK__StaffInOu__InOut__3F466844);
-            this.relationFK__StaffInOu__Staff__3D5E1FD2 = new global::System.Data.DataRelation("FK__StaffInOu__Staff__3D5E1FD2", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__StaffInOu__InOut__2180FB33);
+            this.relationFK__StaffInOu__Staff__1F98B2C1 = new global::System.Data.DataRelation("FK__StaffInOu__Staff__1F98B2C1", new global::System.Data.DataColumn[] {
                         this.tableStaff.StaffIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableStaffInOutHistory.StaffIDColumn}, false);
-            this.Relations.Add(this.relationFK__StaffInOu__Staff__3D5E1FD2);
-            this.relationFK__Staff__InOutStat__398D8EEE = new global::System.Data.DataRelation("FK__Staff__InOutStat__398D8EEE", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__StaffInOu__Staff__1F98B2C1);
+            this.relationFK__Staff__InOutStat__1BC821DD = new global::System.Data.DataRelation("FK__Staff__InOutStat__1BC821DD", new global::System.Data.DataColumn[] {
                         this.tableInOutStatus.InOutStatusIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableStaff.InOutStatusIDColumn}, false);
-            this.Relations.Add(this.relationFK__Staff__InOutStat__398D8EEE);
-            this.relationFK__Staff__ManagerID__3A81B327 = new global::System.Data.DataRelation("FK__Staff__ManagerID__3A81B327", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__Staff__InOutStat__1BC821DD);
+            this.relationFK__Staff__ManagerID__1CBC4616 = new global::System.Data.DataRelation("FK__Staff__ManagerID__1CBC4616", new global::System.Data.DataColumn[] {
                         this.tableStaff.StaffIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableStaff.ManagerIDColumn}, false);
-            this.Relations.Add(this.relationFK__Staff__ManagerID__3A81B327);
+            this.Relations.Add(this.relationFK__Staff__ManagerID__1CBC4616);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -970,26 +972,26 @@ namespace DataAccess {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public StaffInOutHistoryRow AddStaffInOutHistoryRow(int StaffInOutHistoryID, StaffRow parentStaffRowByFK__StaffInOu__Staff__3D5E1FD2, InOutStatusRow parentInOutStatusRowByFK__StaffInOu__InOut__3E52440B, InOutStatusRow parentInOutStatusRowByFK__StaffInOu__InOut__3F466844, System.DateTime DateChanged, StaffRow parentStaffRowByFK__StaffInOu__Chang__403A8C7D) {
+            public StaffInOutHistoryRow AddStaffInOutHistoryRow(StaffRow parentStaffRowByFK__StaffInOu__Staff__1F98B2C1, InOutStatusRow parentInOutStatusRowByFK__StaffInOu__InOut__208CD6FA, InOutStatusRow parentInOutStatusRowByFK__StaffInOu__InOut__2180FB33, System.DateTime DateChanged, StaffRow parentStaffRowByFK__StaffInOu__Chang__22751F6C) {
                 StaffInOutHistoryRow rowStaffInOutHistoryRow = ((StaffInOutHistoryRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        StaffInOutHistoryID,
+                        null,
                         null,
                         null,
                         null,
                         DateChanged,
                         null};
-                if ((parentStaffRowByFK__StaffInOu__Staff__3D5E1FD2 != null)) {
-                    columnValuesArray[1] = parentStaffRowByFK__StaffInOu__Staff__3D5E1FD2[0];
+                if ((parentStaffRowByFK__StaffInOu__Staff__1F98B2C1 != null)) {
+                    columnValuesArray[1] = parentStaffRowByFK__StaffInOu__Staff__1F98B2C1[0];
                 }
-                if ((parentInOutStatusRowByFK__StaffInOu__InOut__3E52440B != null)) {
-                    columnValuesArray[2] = parentInOutStatusRowByFK__StaffInOu__InOut__3E52440B[0];
+                if ((parentInOutStatusRowByFK__StaffInOu__InOut__208CD6FA != null)) {
+                    columnValuesArray[2] = parentInOutStatusRowByFK__StaffInOu__InOut__208CD6FA[0];
                 }
-                if ((parentInOutStatusRowByFK__StaffInOu__InOut__3F466844 != null)) {
-                    columnValuesArray[3] = parentInOutStatusRowByFK__StaffInOu__InOut__3F466844[0];
+                if ((parentInOutStatusRowByFK__StaffInOu__InOut__2180FB33 != null)) {
+                    columnValuesArray[3] = parentInOutStatusRowByFK__StaffInOu__InOut__2180FB33[0];
                 }
-                if ((parentStaffRowByFK__StaffInOu__Chang__403A8C7D != null)) {
-                    columnValuesArray[5] = parentStaffRowByFK__StaffInOu__Chang__403A8C7D[0];
+                if ((parentStaffRowByFK__StaffInOu__Chang__22751F6C != null)) {
+                    columnValuesArray[5] = parentStaffRowByFK__StaffInOu__Chang__22751F6C[0];
                 }
                 rowStaffInOutHistoryRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowStaffInOutHistoryRow);
@@ -1045,7 +1047,11 @@ namespace DataAccess {
                 base.Columns.Add(this.columnChangedByStaffID);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnStaffInOutHistoryID}, true));
+                this.columnStaffInOutHistoryID.AutoIncrement = true;
+                this.columnStaffInOutHistoryID.AutoIncrementSeed = -1;
+                this.columnStaffInOutHistoryID.AutoIncrementStep = -1;
                 this.columnStaffInOutHistoryID.AllowDBNull = false;
+                this.columnStaffInOutHistoryID.ReadOnly = true;
                 this.columnStaffInOutHistoryID.Unique = true;
                 this.columnStaffID.AllowDBNull = false;
                 this.columnInOutStatusIDOld.AllowDBNull = false;
@@ -1345,7 +1351,7 @@ namespace DataAccess {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public StaffRow AddStaffRow(int StaffID, string Lastname, string Firstname, string Nickname, string Username, InOutStatusRow parentInOutStatusRowByFK__Staff__InOutStat__398D8EEE, string TelephoneExtension, bool FlagDeleted, StaffRow parentStaffRowByFK__Staff__ManagerID__3A81B327) {
+            public StaffRow AddStaffRow(int StaffID, string Lastname, string Firstname, string Nickname, string Username, InOutStatusRow parentInOutStatusRowByFK__Staff__InOutStat__1BC821DD, string TelephoneExtension, bool FlagDeleted, StaffRow parentStaffRowByFK__Staff__ManagerID__1CBC4616) {
                 StaffRow rowStaffRow = ((StaffRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         StaffID,
@@ -1357,11 +1363,11 @@ namespace DataAccess {
                         TelephoneExtension,
                         FlagDeleted,
                         null};
-                if ((parentInOutStatusRowByFK__Staff__InOutStat__398D8EEE != null)) {
-                    columnValuesArray[5] = parentInOutStatusRowByFK__Staff__InOutStat__398D8EEE[0];
+                if ((parentInOutStatusRowByFK__Staff__InOutStat__1BC821DD != null)) {
+                    columnValuesArray[5] = parentInOutStatusRowByFK__Staff__InOutStat__1BC821DD[0];
                 }
-                if ((parentStaffRowByFK__Staff__ManagerID__3A81B327 != null)) {
-                    columnValuesArray[8] = parentStaffRowByFK__Staff__ManagerID__3A81B327[0];
+                if ((parentStaffRowByFK__Staff__ManagerID__1CBC4616 != null)) {
+                    columnValuesArray[8] = parentStaffRowByFK__Staff__ManagerID__1CBC4616[0];
                 }
                 rowStaffRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowStaffRow);
@@ -2489,7 +2495,7 @@ namespace DataAccess {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public GetEmployeeHistoryRow AddGetEmployeeHistoryRow(string Nickname, string Status_before_change, string status_after_change, System.DateTime DateChanged, string Status_change_by) {
+            public GetEmployeeHistoryRow AddGetEmployeeHistoryRow(string Nickname, string Status_before_change, string status_after_change, System.DateTime DateChanged, int Status_change_by) {
                 GetEmployeeHistoryRow rowGetEmployeeHistoryRow = ((GetEmployeeHistoryRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Nickname,
@@ -2537,17 +2543,16 @@ namespace DataAccess {
                 base.Columns.Add(this.columnstatus_after_change);
                 this.columnDateChanged = new global::System.Data.DataColumn("DateChanged", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDateChanged);
-                this.columnStatus_change_by = new global::System.Data.DataColumn("Status change by", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnStatus_change_by = new global::System.Data.DataColumn("Status change by", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnStatus_change_by);
                 this.columnNickname.AllowDBNull = false;
                 this.columnNickname.MaxLength = 80;
-                this.columnStatus_before_change.ReadOnly = true;
+                this.columnStatus_before_change.AllowDBNull = false;
                 this.columnStatus_before_change.MaxLength = 255;
-                this.columnstatus_after_change.ReadOnly = true;
+                this.columnstatus_after_change.AllowDBNull = false;
                 this.columnstatus_after_change.MaxLength = 255;
                 this.columnDateChanged.AllowDBNull = false;
-                this.columnStatus_change_by.ReadOnly = true;
-                this.columnStatus_change_by.MaxLength = 80;
+                this.columnStatus_change_by.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3448,34 +3453,34 @@ namespace DataAccess {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public StaffInOutHistoryRow[] GetStaffInOutHistoryRowsByFK__StaffInOu__InOut__3E52440B() {
-                if ((this.Table.ChildRelations["FK__StaffInOu__InOut__3E52440B"] == null)) {
+            public StaffInOutHistoryRow[] GetStaffInOutHistoryRowsByFK__StaffInOu__InOut__208CD6FA() {
+                if ((this.Table.ChildRelations["FK__StaffInOu__InOut__208CD6FA"] == null)) {
                     return new StaffInOutHistoryRow[0];
                 }
                 else {
-                    return ((StaffInOutHistoryRow[])(base.GetChildRows(this.Table.ChildRelations["FK__StaffInOu__InOut__3E52440B"])));
+                    return ((StaffInOutHistoryRow[])(base.GetChildRows(this.Table.ChildRelations["FK__StaffInOu__InOut__208CD6FA"])));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public StaffInOutHistoryRow[] GetStaffInOutHistoryRowsByFK__StaffInOu__InOut__3F466844() {
-                if ((this.Table.ChildRelations["FK__StaffInOu__InOut__3F466844"] == null)) {
+            public StaffInOutHistoryRow[] GetStaffInOutHistoryRowsByFK__StaffInOu__InOut__2180FB33() {
+                if ((this.Table.ChildRelations["FK__StaffInOu__InOut__2180FB33"] == null)) {
                     return new StaffInOutHistoryRow[0];
                 }
                 else {
-                    return ((StaffInOutHistoryRow[])(base.GetChildRows(this.Table.ChildRelations["FK__StaffInOu__InOut__3F466844"])));
+                    return ((StaffInOutHistoryRow[])(base.GetChildRows(this.Table.ChildRelations["FK__StaffInOu__InOut__2180FB33"])));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public StaffRow[] GetStaffRows() {
-                if ((this.Table.ChildRelations["FK__Staff__InOutStat__398D8EEE"] == null)) {
+                if ((this.Table.ChildRelations["FK__Staff__InOutStat__1BC821DD"] == null)) {
                     return new StaffRow[0];
                 }
                 else {
-                    return ((StaffRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Staff__InOutStat__398D8EEE"])));
+                    return ((StaffRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Staff__InOutStat__1BC821DD"])));
                 }
             }
         }
@@ -3562,45 +3567,45 @@ namespace DataAccess {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public StaffRow StaffRowByFK__StaffInOu__Chang__403A8C7D {
+            public StaffRow StaffRowByFK__StaffInOu__Chang__22751F6C {
                 get {
-                    return ((StaffRow)(this.GetParentRow(this.Table.ParentRelations["FK__StaffInOu__Chang__403A8C7D"])));
+                    return ((StaffRow)(this.GetParentRow(this.Table.ParentRelations["FK__StaffInOu__Chang__22751F6C"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__StaffInOu__Chang__403A8C7D"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__StaffInOu__Chang__22751F6C"]);
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public InOutStatusRow InOutStatusRowByFK__StaffInOu__InOut__3E52440B {
+            public InOutStatusRow InOutStatusRowByFK__StaffInOu__InOut__208CD6FA {
                 get {
-                    return ((InOutStatusRow)(this.GetParentRow(this.Table.ParentRelations["FK__StaffInOu__InOut__3E52440B"])));
+                    return ((InOutStatusRow)(this.GetParentRow(this.Table.ParentRelations["FK__StaffInOu__InOut__208CD6FA"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__StaffInOu__InOut__3E52440B"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__StaffInOu__InOut__208CD6FA"]);
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public InOutStatusRow InOutStatusRowByFK__StaffInOu__InOut__3F466844 {
+            public InOutStatusRow InOutStatusRowByFK__StaffInOu__InOut__2180FB33 {
                 get {
-                    return ((InOutStatusRow)(this.GetParentRow(this.Table.ParentRelations["FK__StaffInOu__InOut__3F466844"])));
+                    return ((InOutStatusRow)(this.GetParentRow(this.Table.ParentRelations["FK__StaffInOu__InOut__2180FB33"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__StaffInOu__InOut__3F466844"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__StaffInOu__InOut__2180FB33"]);
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public StaffRow StaffRowByFK__StaffInOu__Staff__3D5E1FD2 {
+            public StaffRow StaffRowByFK__StaffInOu__Staff__1F98B2C1 {
                 get {
-                    return ((StaffRow)(this.GetParentRow(this.Table.ParentRelations["FK__StaffInOu__Staff__3D5E1FD2"])));
+                    return ((StaffRow)(this.GetParentRow(this.Table.ParentRelations["FK__StaffInOu__Staff__1F98B2C1"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__StaffInOu__Staff__3D5E1FD2"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__StaffInOu__Staff__1F98B2C1"]);
                 }
             }
         }
@@ -3727,10 +3732,10 @@ namespace DataAccess {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public InOutStatusRow InOutStatusRow {
                 get {
-                    return ((InOutStatusRow)(this.GetParentRow(this.Table.ParentRelations["FK__Staff__InOutStat__398D8EEE"])));
+                    return ((InOutStatusRow)(this.GetParentRow(this.Table.ParentRelations["FK__Staff__InOutStat__1BC821DD"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__Staff__InOutStat__398D8EEE"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Staff__InOutStat__1BC821DD"]);
                 }
             }
             
@@ -3738,10 +3743,10 @@ namespace DataAccess {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public StaffRow StaffRowParent {
                 get {
-                    return ((StaffRow)(this.GetParentRow(this.Table.ParentRelations["FK__Staff__ManagerID__3A81B327"])));
+                    return ((StaffRow)(this.GetParentRow(this.Table.ParentRelations["FK__Staff__ManagerID__1CBC4616"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__Staff__ManagerID__3A81B327"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Staff__ManagerID__1CBC4616"]);
                 }
             }
             
@@ -3759,34 +3764,34 @@ namespace DataAccess {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public StaffInOutHistoryRow[] GetStaffInOutHistoryRowsByFK__StaffInOu__Chang__403A8C7D() {
-                if ((this.Table.ChildRelations["FK__StaffInOu__Chang__403A8C7D"] == null)) {
+            public StaffInOutHistoryRow[] GetStaffInOutHistoryRowsByFK__StaffInOu__Chang__22751F6C() {
+                if ((this.Table.ChildRelations["FK__StaffInOu__Chang__22751F6C"] == null)) {
                     return new StaffInOutHistoryRow[0];
                 }
                 else {
-                    return ((StaffInOutHistoryRow[])(base.GetChildRows(this.Table.ChildRelations["FK__StaffInOu__Chang__403A8C7D"])));
+                    return ((StaffInOutHistoryRow[])(base.GetChildRows(this.Table.ChildRelations["FK__StaffInOu__Chang__22751F6C"])));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public StaffInOutHistoryRow[] GetStaffInOutHistoryRowsByFK__StaffInOu__Staff__3D5E1FD2() {
-                if ((this.Table.ChildRelations["FK__StaffInOu__Staff__3D5E1FD2"] == null)) {
+            public StaffInOutHistoryRow[] GetStaffInOutHistoryRowsByFK__StaffInOu__Staff__1F98B2C1() {
+                if ((this.Table.ChildRelations["FK__StaffInOu__Staff__1F98B2C1"] == null)) {
                     return new StaffInOutHistoryRow[0];
                 }
                 else {
-                    return ((StaffInOutHistoryRow[])(base.GetChildRows(this.Table.ChildRelations["FK__StaffInOu__Staff__3D5E1FD2"])));
+                    return ((StaffInOutHistoryRow[])(base.GetChildRows(this.Table.ChildRelations["FK__StaffInOu__Staff__1F98B2C1"])));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public StaffRow[] GetStaffRows() {
-                if ((this.Table.ChildRelations["FK__Staff__ManagerID__3A81B327"] == null)) {
+                if ((this.Table.ChildRelations["FK__Staff__ManagerID__1CBC4616"] == null)) {
                     return new StaffRow[0];
                 }
                 else {
-                    return ((StaffRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Staff__ManagerID__3A81B327"])));
+                    return ((StaffRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Staff__ManagerID__1CBC4616"])));
                 }
             }
         }
@@ -4104,13 +4109,7 @@ namespace DataAccess {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Status_before_change {
                 get {
-                    try {
-                        return ((string)(this[this.tableGetEmployeeHistory.Status_before_changeColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Status before change\' in table \'GetEmployeeHistory\' is DBNu" +
-                                "ll.", e);
-                    }
+                    return ((string)(this[this.tableGetEmployeeHistory.Status_before_changeColumn]));
                 }
                 set {
                     this[this.tableGetEmployeeHistory.Status_before_changeColumn] = value;
@@ -4121,13 +4120,7 @@ namespace DataAccess {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string status_after_change {
                 get {
-                    try {
-                        return ((string)(this[this.tableGetEmployeeHistory.status_after_changeColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'status after change\' in table \'GetEmployeeHistory\' is DBNul" +
-                                "l.", e);
-                    }
+                    return ((string)(this[this.tableGetEmployeeHistory.status_after_changeColumn]));
                 }
                 set {
                     this[this.tableGetEmployeeHistory.status_after_changeColumn] = value;
@@ -4147,54 +4140,13 @@ namespace DataAccess {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Status_change_by {
+            public int Status_change_by {
                 get {
-                    try {
-                        return ((string)(this[this.tableGetEmployeeHistory.Status_change_byColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Status change by\' in table \'GetEmployeeHistory\' is DBNull.", e);
-                    }
+                    return ((int)(this[this.tableGetEmployeeHistory.Status_change_byColumn]));
                 }
                 set {
                     this[this.tableGetEmployeeHistory.Status_change_byColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsStatus_before_changeNull() {
-                return this.IsNull(this.tableGetEmployeeHistory.Status_before_changeColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetStatus_before_changeNull() {
-                this[this.tableGetEmployeeHistory.Status_before_changeColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isstatus_after_changeNull() {
-                return this.IsNull(this.tableGetEmployeeHistory.status_after_changeColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setstatus_after_changeNull() {
-                this[this.tableGetEmployeeHistory.status_after_changeColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsStatus_change_byNull() {
-                return this.IsNull(this.tableGetEmployeeHistory.Status_change_byColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetStatus_change_byNull() {
-                this[this.tableGetEmployeeHistory.Status_change_byColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -4302,10 +4254,17 @@ namespace DataAccess {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int ManagerID {
+            public int? ManagerID {
                 get {
                     try {
-                        return ((int)(this[this.tableGetEmployeeList.ManagerIDColumn]));
+                        if (this[this.tableGetEmployeeList.ManagerIDColumn] == DBNull.Value)
+                        {
+                            return null;
+                        }
+                        else
+                        {
+                            return ((int)(this[this.tableGetEmployeeList.ManagerIDColumn]));
+                        }
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'ManagerID\' in table \'GetEmployeeList\' is DBNull.", e);
@@ -5157,10 +5116,9 @@ SELECT InOutStatusID, Description FROM InOutStatus WHERE (InOutStatusID = @InOut
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ChangedByStaffID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ChangedByStaffID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[StaffInOutHistory] ([StaffInOutHistoryID], [StaffID], [InOutStatusIDOld], [InOutStatusIDNew], [DateChanged], [ChangedByStaffID]) VALUES (@StaffInOutHistoryID, @StaffID, @InOutStatusIDOld, @InOutStatusIDNew, @DateChanged, @ChangedByStaffID);
-SELECT StaffInOutHistoryID, StaffID, InOutStatusIDOld, InOutStatusIDNew, DateChanged, ChangedByStaffID FROM StaffInOutHistory WHERE (StaffInOutHistoryID = @StaffInOutHistoryID)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[StaffInOutHistory] ([StaffID], [InOutStatusIDOld], [InOutStatusIDNew], [DateChanged], [ChangedByStaffID]) VALUES (@StaffID, @InOutStatusIDOld, @InOutStatusIDNew, @DateChanged, @ChangedByStaffID);
+SELECT StaffInOutHistoryID, StaffID, InOutStatusIDOld, InOutStatusIDNew, DateChanged, ChangedByStaffID FROM StaffInOutHistory WHERE (StaffInOutHistoryID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StaffInOutHistoryID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StaffInOutHistoryID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StaffID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StaffID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@InOutStatusIDOld", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "InOutStatusIDOld", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@InOutStatusIDNew", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "InOutStatusIDNew", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -5168,10 +5126,9 @@ SELECT StaffInOutHistoryID, StaffID, InOutStatusIDOld, InOutStatusIDNew, DateCha
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ChangedByStaffID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ChangedByStaffID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[StaffInOutHistory] SET [StaffInOutHistoryID] = @StaffInOutHistoryID, [StaffID] = @StaffID, [InOutStatusIDOld] = @InOutStatusIDOld, [InOutStatusIDNew] = @InOutStatusIDNew, [DateChanged] = @DateChanged, [ChangedByStaffID] = @ChangedByStaffID WHERE (([StaffInOutHistoryID] = @Original_StaffInOutHistoryID) AND ([StaffID] = @Original_StaffID) AND ([InOutStatusIDOld] = @Original_InOutStatusIDOld) AND ([InOutStatusIDNew] = @Original_InOutStatusIDNew) AND ([DateChanged] = @Original_DateChanged) AND ([ChangedByStaffID] = @Original_ChangedByStaffID));
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[StaffInOutHistory] SET [StaffID] = @StaffID, [InOutStatusIDOld] = @InOutStatusIDOld, [InOutStatusIDNew] = @InOutStatusIDNew, [DateChanged] = @DateChanged, [ChangedByStaffID] = @ChangedByStaffID WHERE (([StaffInOutHistoryID] = @Original_StaffInOutHistoryID) AND ([StaffID] = @Original_StaffID) AND ([InOutStatusIDOld] = @Original_InOutStatusIDOld) AND ([InOutStatusIDNew] = @Original_InOutStatusIDNew) AND ([DateChanged] = @Original_DateChanged) AND ([ChangedByStaffID] = @Original_ChangedByStaffID));
 SELECT StaffInOutHistoryID, StaffID, InOutStatusIDOld, InOutStatusIDNew, DateChanged, ChangedByStaffID FROM StaffInOutHistory WHERE (StaffInOutHistoryID = @StaffInOutHistoryID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StaffInOutHistoryID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StaffInOutHistoryID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StaffID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StaffID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@InOutStatusIDOld", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "InOutStatusIDOld", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@InOutStatusIDNew", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "InOutStatusIDNew", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -5183,6 +5140,7 @@ SELECT StaffInOutHistoryID, StaffID, InOutStatusIDOld, InOutStatusIDNew, DateCha
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_InOutStatusIDNew", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "InOutStatusIDNew", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DateChanged", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateChanged", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ChangedByStaffID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ChangedByStaffID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StaffInOutHistoryID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "StaffInOutHistoryID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5287,13 +5245,12 @@ SELECT StaffInOutHistoryID, StaffID, InOutStatusIDOld, InOutStatusIDNew, DateCha
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int StaffInOutHistoryID, int StaffID, int InOutStatusIDOld, int InOutStatusIDNew, System.DateTime DateChanged, int ChangedByStaffID) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(StaffInOutHistoryID));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(StaffID));
-            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(InOutStatusIDOld));
-            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(InOutStatusIDNew));
-            this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(DateChanged));
-            this.Adapter.InsertCommand.Parameters[5].Value = ((int)(ChangedByStaffID));
+        public virtual int Insert(int StaffID, int InOutStatusIDOld, int InOutStatusIDNew, System.DateTime DateChanged, int ChangedByStaffID) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(StaffID));
+            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(InOutStatusIDOld));
+            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(InOutStatusIDNew));
+            this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(DateChanged));
+            this.Adapter.InsertCommand.Parameters[4].Value = ((int)(ChangedByStaffID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5314,19 +5271,19 @@ SELECT StaffInOutHistoryID, StaffID, InOutStatusIDOld, InOutStatusIDNew, DateCha
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int StaffInOutHistoryID, int StaffID, int InOutStatusIDOld, int InOutStatusIDNew, System.DateTime DateChanged, int ChangedByStaffID, int Original_StaffInOutHistoryID, int Original_StaffID, int Original_InOutStatusIDOld, int Original_InOutStatusIDNew, System.DateTime Original_DateChanged, int Original_ChangedByStaffID) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(StaffInOutHistoryID));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(StaffID));
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(InOutStatusIDOld));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(InOutStatusIDNew));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(DateChanged));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(ChangedByStaffID));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_StaffInOutHistoryID));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_StaffID));
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_InOutStatusIDOld));
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_InOutStatusIDNew));
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((System.DateTime)(Original_DateChanged));
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_ChangedByStaffID));
+        public virtual int Update(int StaffID, int InOutStatusIDOld, int InOutStatusIDNew, System.DateTime DateChanged, int ChangedByStaffID, int Original_StaffInOutHistoryID, int Original_StaffID, int Original_InOutStatusIDOld, int Original_InOutStatusIDNew, System.DateTime Original_DateChanged, int Original_ChangedByStaffID, int StaffInOutHistoryID) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(StaffID));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(InOutStatusIDOld));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(InOutStatusIDNew));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(DateChanged));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(ChangedByStaffID));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_StaffInOutHistoryID));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_StaffID));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_InOutStatusIDOld));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_InOutStatusIDNew));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(Original_DateChanged));
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_ChangedByStaffID));
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(StaffInOutHistoryID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5348,7 +5305,7 @@ SELECT StaffInOutHistoryID, StaffID, InOutStatusIDOld, InOutStatusIDNew, DateCha
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(int StaffID, int InOutStatusIDOld, int InOutStatusIDNew, System.DateTime DateChanged, int ChangedByStaffID, int Original_StaffInOutHistoryID, int Original_StaffID, int Original_InOutStatusIDOld, int Original_InOutStatusIDNew, System.DateTime Original_DateChanged, int Original_ChangedByStaffID) {
-            return this.Update(Original_StaffInOutHistoryID, StaffID, InOutStatusIDOld, InOutStatusIDNew, DateChanged, ChangedByStaffID, Original_StaffInOutHistoryID, Original_StaffID, Original_InOutStatusIDOld, Original_InOutStatusIDNew, Original_DateChanged, Original_ChangedByStaffID);
+            return this.Update(StaffID, InOutStatusIDOld, InOutStatusIDNew, DateChanged, ChangedByStaffID, Original_StaffInOutHistoryID, Original_StaffID, Original_InOutStatusIDOld, Original_InOutStatusIDNew, Original_DateChanged, Original_ChangedByStaffID, Original_StaffInOutHistoryID);
         }
     }
     
@@ -6826,37 +6783,38 @@ SELECT StaffID, Lastname, Firstname, Nickname, Username, InOutStatusID, Telephon
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@staffID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Connection = new global::System.Data.SqlClient.SqlConnection(global::DataAccess.Properties.Settings.Default.StaffStatusConnectionString);
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).CommandText = "dbo.UpdateEmployeeDetails";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).CommandText = "dbo.insertEmployee";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@staffID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Lastname", global::System.Data.SqlDbType.VarChar, 1, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@firstname", global::System.Data.SqlDbType.VarChar, 1, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nickname", global::System.Data.SqlDbType.VarChar, 1, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@telephoneExtension", global::System.Data.SqlDbType.VarChar, 1, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@lastname", global::System.Data.SqlDbType.VarChar, 80, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@firstname", global::System.Data.SqlDbType.VarChar, 80, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nickname", global::System.Data.SqlDbType.VarChar, 80, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@username", global::System.Data.SqlDbType.VarChar, 80, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@inoutstatusID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@extension", global::System.Data.SqlDbType.VarChar, 80, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flagDeleted", global::System.Data.SqlDbType.Bit, 1, global::System.Data.ParameterDirection.Input, 1, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@managerid", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@changedBy", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Connection = new global::System.Data.SqlClient.SqlConnection(global::DataAccess.Properties.Settings.Default.StaffStatusConnectionString);
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).CommandText = "dbo.UpdateEmployeeStatus";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).CommandText = "dbo.UpdateEmployeeDetails";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@staffId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@changedby", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@description", global::System.Data.SqlDbType.VarChar, 255, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@staffID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Lastname", global::System.Data.SqlDbType.NVarChar, 80, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@firstname", global::System.Data.SqlDbType.NVarChar, 80, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nickname", global::System.Data.SqlDbType.NVarChar, 80, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@username", global::System.Data.SqlDbType.NVarChar, 80, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@telephoneExtension", global::System.Data.SqlDbType.NVarChar, 80, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[2])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flagDeleted", global::System.Data.SqlDbType.Bit, 1, global::System.Data.ParameterDirection.Input, 1, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Connection = new global::System.Data.SqlClient.SqlConnection(global::DataAccess.Properties.Settings.Default.StaffStatusConnectionString);
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).CommandText = "dbo.insertEmployee";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).CommandText = "dbo.UpdateEmployeeStatus";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@staffid", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@lastname", global::System.Data.SqlDbType.VarChar, 1, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@firstname", global::System.Data.SqlDbType.VarChar, 1, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nickname", global::System.Data.SqlDbType.VarChar, 1, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@username", global::System.Data.SqlDbType.VarChar, 1, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@inoutstatusID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@extension", global::System.Data.SqlDbType.VarChar, 1, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flagDeleted", global::System.Data.SqlDbType.Bit, 1, global::System.Data.ParameterDirection.Input, 1, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@managerid", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@staffId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@changedby", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[3])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@description", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6890,8 +6848,84 @@ SELECT StaffID, Lastname, Firstname, Nickname, Username, InOutStatusID, Telephon
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int UpdateEmployeeDetails(global::System.Nullable<int> staffID, string Lastname, string firstname, string nickname, string telephoneExtension, global::System.Nullable<bool> flagDeleted) {
+        public virtual int insertEmployee(string lastname, string firstname, string nickname, string username, global::System.Nullable<int> inoutstatusID, string extension, global::System.Nullable<bool> flagDeleted, global::System.Nullable<int> managerid, global::System.Nullable<int> changedBy) {
             global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[1]));
+            if ((lastname == null)) {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[1].Value = ((string)(lastname));
+            }
+            if ((firstname == null)) {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[2].Value = ((string)(firstname));
+            }
+            if ((nickname == null)) {
+                command.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[3].Value = ((string)(nickname));
+            }
+            if ((username == null)) {
+                command.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[4].Value = ((string)(username));
+            }
+            if ((inoutstatusID.HasValue == true)) {
+                command.Parameters[5].Value = ((int)(inoutstatusID.Value));
+            }
+            else {
+                command.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((extension == null)) {
+                command.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[6].Value = ((string)(extension));
+            }
+            if ((flagDeleted.HasValue == true)) {
+                command.Parameters[7].Value = ((bool)(flagDeleted.Value));
+            }
+            else {
+                command.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((managerid.HasValue == true)) {
+                command.Parameters[8].Value = ((int)(managerid.Value));
+            }
+            else {
+                command.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((changedBy.HasValue == true)) {
+                command.Parameters[9].Value = ((int)(changedBy.Value));
+            }
+            else {
+                command.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int UpdateEmployeeDetails(global::System.Nullable<int> staffID, string Lastname, string firstname, string nickname, string username, string telephoneExtension, global::System.Nullable<bool> flagDeleted) {
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[2]));
             if ((staffID.HasValue == true)) {
                 command.Parameters[1].Value = ((int)(staffID.Value));
             }
@@ -6916,17 +6950,23 @@ SELECT StaffID, Lastname, Firstname, Nickname, Username, InOutStatusID, Telephon
             else {
                 command.Parameters[4].Value = ((string)(nickname));
             }
-            if ((telephoneExtension == null)) {
+            if ((username == null)) {
                 command.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[5].Value = ((string)(telephoneExtension));
+                command.Parameters[5].Value = ((string)(username));
             }
-            if ((flagDeleted.HasValue == true)) {
-                command.Parameters[6].Value = ((bool)(flagDeleted.Value));
+            if ((telephoneExtension == null)) {
+                command.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[6].Value = global::System.DBNull.Value;
+                command.Parameters[6].Value = ((string)(telephoneExtension));
+            }
+            if ((flagDeleted.HasValue == true)) {
+                command.Parameters[7].Value = ((bool)(flagDeleted.Value));
+            }
+            else {
+                command.Parameters[7].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -6948,8 +6988,8 @@ SELECT StaffID, Lastname, Firstname, Nickname, Username, InOutStatusID, Telephon
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int UpdateEmployeeStatus(global::System.Nullable<int> staffId, global::System.Nullable<int> changedby, string description) {
-            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[2]));
+        public virtual int UpdateEmployeeStatus(global::System.Nullable<int> staffId, global::System.Nullable<int> changedby, global::System.Nullable<int> description) {
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[3]));
             if ((staffId.HasValue == true)) {
                 command.Parameters[1].Value = ((int)(staffId.Value));
             }
@@ -6962,87 +7002,11 @@ SELECT StaffID, Lastname, Firstname, Nickname, Username, InOutStatusID, Telephon
             else {
                 command.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((description == null)) {
+            if ((description.HasValue == true)) {
+                command.Parameters[3].Value = ((int)(description.Value));
+            }
+            else {
                 command.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[3].Value = ((string)(description));
-            }
-            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
-            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                command.Connection.Open();
-            }
-            int returnValue;
-            try {
-                returnValue = command.ExecuteNonQuery();
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    command.Connection.Close();
-                }
-            }
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int insertEmployee(global::System.Nullable<int> staffid, string lastname, string firstname, string nickname, string username, global::System.Nullable<int> inoutstatusID, string extension, global::System.Nullable<bool> flagDeleted, global::System.Nullable<int> managerid) {
-            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[3]));
-            if ((staffid.HasValue == true)) {
-                command.Parameters[1].Value = ((int)(staffid.Value));
-            }
-            else {
-                command.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((lastname == null)) {
-                command.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[2].Value = ((string)(lastname));
-            }
-            if ((firstname == null)) {
-                command.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[3].Value = ((string)(firstname));
-            }
-            if ((nickname == null)) {
-                command.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[4].Value = ((string)(nickname));
-            }
-            if ((username == null)) {
-                command.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[5].Value = ((string)(username));
-            }
-            if ((inoutstatusID.HasValue == true)) {
-                command.Parameters[6].Value = ((int)(inoutstatusID.Value));
-            }
-            else {
-                command.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            if ((extension == null)) {
-                command.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[7].Value = ((string)(extension));
-            }
-            if ((flagDeleted.HasValue == true)) {
-                command.Parameters[8].Value = ((bool)(flagDeleted.Value));
-            }
-            else {
-                command.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            if ((managerid.HasValue == true)) {
-                command.Parameters[9].Value = ((int)(managerid.Value));
-            }
-            else {
-                command.Parameters[9].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -7215,7 +7179,7 @@ SELECT StaffID, Lastname, Firstname, Nickname, Username, InOutStatusID, Telephon
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    this.SortSelfReferenceRows(updatedRows, dataSet.Relations["FK__Staff__ManagerID__3A81B327"], false);
+                    this.SortSelfReferenceRows(updatedRows, dataSet.Relations["FK__Staff__ManagerID__1CBC4616"], false);
                     result = (result + this._staffTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
@@ -7251,7 +7215,7 @@ SELECT StaffID, Lastname, Firstname, Nickname, Username, InOutStatusID, Telephon
                 global::System.Data.DataRow[] addedRows = dataSet.Staff.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    this.SortSelfReferenceRows(addedRows, dataSet.Relations["FK__Staff__ManagerID__3A81B327"], false);
+                    this.SortSelfReferenceRows(addedRows, dataSet.Relations["FK__Staff__ManagerID__1CBC4616"], false);
                     result = (result + this._staffTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
@@ -7286,7 +7250,7 @@ SELECT StaffID, Lastname, Firstname, Nickname, Username, InOutStatusID, Telephon
                 global::System.Data.DataRow[] deletedRows = dataSet.Staff.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    this.SortSelfReferenceRows(deletedRows, dataSet.Relations["FK__Staff__ManagerID__3A81B327"], true);
+                    this.SortSelfReferenceRows(deletedRows, dataSet.Relations["FK__Staff__ManagerID__1CBC4616"], true);
                     result = (result + this._staffTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
